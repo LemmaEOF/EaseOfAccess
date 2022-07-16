@@ -1,7 +1,11 @@
-package com.example.examplemod.platform;
+package gay.lemmaeof.easeofaccess.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import gay.lemmaeof.easeofaccess.platform.services.IPlatformHelper;
+import gay.lemmaeof.easeofaccess.AddOptionsCallback;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.Option;
+
+import java.util.List;
 
 public class FabricPlatformHelper implements IPlatformHelper {
 
@@ -20,5 +24,10 @@ public class FabricPlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return FabricLoader.getInstance().isDevelopmentEnvironment();
+    }
+
+    @Override
+    public List<Option> fireOptionEvent() {
+        return AddOptionsCallback.EVENT.invoker().getAccessibilityOptions();
     }
 }

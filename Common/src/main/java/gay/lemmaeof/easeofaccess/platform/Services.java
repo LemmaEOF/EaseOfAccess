@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package gay.lemmaeof.easeofaccess.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import gay.lemmaeof.easeofaccess.Constants;
+import gay.lemmaeof.easeofaccess.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

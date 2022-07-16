@@ -1,4 +1,8 @@
-package com.example.examplemod.platform.services;
+package gay.lemmaeof.easeofaccess.platform.services;
+
+import net.minecraft.client.Option;
+
+import java.util.List;
 
 public interface IPlatformHelper {
 
@@ -23,4 +27,6 @@ public interface IPlatformHelper {
      * @return True if in a development environment, false otherwise.
      */
     boolean isDevelopmentEnvironment();
+
+    List<Option> fireOptionEvent();
 }

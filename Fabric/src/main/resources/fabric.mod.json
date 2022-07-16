@@ -1,29 +1,24 @@
 {
     "schemaVersion": 1,
-    "id": "modid",
+    "id": "easeofaccess",
     "version": "${version}",
   
-    "name": "Example Mod",
-    "description": "This is an example description! Tell everyone what your mod is about!",
+    "name": "Ease of Access",
+    "description": "An API for adding more options to the accessibility menu.",
     "authors": [
-      "Me!"
+      "LemmaEOF"
     ],
     "contact": {
-      "homepage": "https://fabricmc.net/",
-      "sources": "https://github.com/FabricMC/fabric-example-mod"
+      "homepage": "https://lemmaeof.gay/",
+      "sources": "https://github.com/LemmaEOF/EaseOfAccess"
     },
   
-    "license": "CC0-1.0",
-    "icon": "assets/modid/icon.png",
+    "license": "Apache-2.0",
+    "icon": "assets/easeofaccess/icon.png",
   
     "environment": "*",
-    "entrypoints": {
-      "main": [
-        "com.example.examplemod.ExampleMod"
-      ]
-    },
     "mixins": [
-      "modid.mixins.json"
+      "easeofaccess.mixins.json"
     ],
   
     "depends": {
@@ -31,9 +26,5 @@
       "fabric": "*",
       "minecraft": "1.18.x",
       "java": ">=17"
-    },
-    "suggests": {
-      "another-mod": "*"
     }
-  }
-  
+}
