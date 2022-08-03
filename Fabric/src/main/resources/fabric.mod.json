@@ -20,6 +20,12 @@
     "mixins": [
       "easeofaccess.mixins.json"
     ],
+
+    "entrypoints": {
+      "client": [
+        "gay.lemmaeof.easeofaccess.EaseOfAccess"
+      ]
+    },
   
     "depends": {
       "fabricloader": ">=0.13",
