@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
 public class MixinAccessibilityOptionsScreen {
 	@ModifyArg(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screens/SimpleOptionsSubScreen;<init>(Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/Options;Lnet/minecraft/network/chat/Component;[Lnet/minecraft/client/Option;)V"), index = 3)
 	private static Option[] addExtraOptions(Option[] original) {
-		List<Option> ret = Arrays.asList(original);
+		List<Option> ret = new ArrayList<>(Arrays.asList(original));
 		ret.addAll(Services.PLATFORM.fireOptionEvent());
 		return ret.toArray(new Option[]{});
 	}
