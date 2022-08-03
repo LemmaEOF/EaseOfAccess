@@ -1,3 +1,4 @@
 {
-  "options.accessibility.reduce_motion": "Reduce Motion"
+  "options.accessibility.reduce_motion": "Reduce Motion",
+  "options.accessibility.reduce_motion.tooltip": "Reduces motion effects in mods that support Ease Of Access."
 }
